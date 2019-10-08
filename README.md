@@ -1,2 +1,7 @@
 # cumulocity-swagger-openapi
 Swagger/OpenAPI RESTful API for Cumulocity
+
+This repository contains a Swagger/OpenAPI v2.0 API file.
+
+The source of the API is the official Cumulocity Postman collection https://app.getpostman.com/run-collection/7c7d00719ab238097686
+The collection has been converted using APIMatic's API Transformer https://www.apimatic.io/transformer
