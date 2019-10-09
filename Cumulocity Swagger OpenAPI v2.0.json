@@ -1,0 +1,4448 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Cumulocity API",
+    "description": "This API has been converted from the official Cumulocity Postman Collection. https://cumulocity.com/guides/microservice-sdk/rest/",
+    "contact": {}
+  },
+  "host": "{host}",
+  "basePath": "/",
+  "securityDefinitions": {
+    "auth": {
+      "type": "basic"
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/alarm/alarms": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Alarm Reference Guide](http://cumulocity.com/guides/reference/alarms/)",
+        "summary": "Get collection of alarms",
+        "tags": [
+          "Alarm"
+        ],
+        "operationId": "AlarmAlarmsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Alarm Reference Guide](http://cumulocity.com/guides/reference/alarms/)",
+        "summary": "Create new alarm",
+        "tags": [
+          "Alarm"
+        ],
+        "operationId": "AlarmAlarmsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatenewalarmRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/alarm/alarms/{alarmId}": {
+      "put": {
+        "description": "#### For a detailed description of the API please check out our [Measurement Reference Guide](http://cumulocity.com/guides/reference/measurements/)",
+        "summary": "Acknowledge an alarm",
+        "tags": [
+          "Alarm"
+        ],
+        "operationId": "AlarmAlarmsByAlarmIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AcknowledgeanalarmRequest"
+            }
+          },
+          {
+            "name": "alarmId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/application/plugins": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Application Reference Guide](http://cumulocity.com/guides/reference/applications/)",
+        "summary": "Get plugin collection",
+        "tags": [
+          "Application"
+        ],
+        "operationId": "ApplicationPluginsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/application/applications": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Application Reference Guide](http://cumulocity.com/guides/reference/applications/)",
+        "summary": "Get application collection",
+        "tags": [
+          "Application"
+        ],
+        "operationId": "ApplicationApplicationsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/application/applications/{applicationId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Application Reference Guide](http://cumulocity.com/guides/reference/applications/)",
+        "summary": "Get specific application",
+        "tags": [
+          "Application"
+        ],
+        "operationId": "ApplicationApplicationsByApplicationIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "applicationId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/audit/auditRecords": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Auditing Reference Guide](http://cumulocity.com/guides/reference/auditing/)",
+        "summary": "Get audit records",
+        "tags": [
+          "Audit"
+        ],
+        "operationId": "AuditAuditRecordsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Auditing Reference Guide](http://cumulocity.com/guides/reference/auditing/)",
+        "summary": "Create audit record",
+        "tags": [
+          "Audit"
+        ],
+        "operationId": "AuditAuditRecordsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateauditrecordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Auditing Reference Guide](http://cumulocity.com/guides/reference/auditing/)",
+        "summary": "Delete audit records for time filter",
+        "tags": [
+          "Audit"
+        ],
+        "operationId": "AuditAuditRecordsDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/binaries": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Binaries Reference Guide](http://cumulocity.com/guides/reference/binaries/)",
+        "summary": "Get collection of Binaries (no download)",
+        "tags": [
+          "Binaries"
+        ],
+        "operationId": "InventoryBinariesGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Binaries Reference Guide](http://cumulocity.com/guides/reference/binaries/)",
+        "summary": "Upload text file",
+        "tags": [
+          "Binaries"
+        ],
+        "operationId": "InventoryBinariesPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "object",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "filesize",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "file",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/binaries/{binaryId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Binaries Reference Guide](http://cumulocity.com/guides/reference/binaries/)",
+        "summary": "Download a binary",
+        "tags": [
+          "Binaries"
+        ],
+        "operationId": "InventoryBinariesByBinaryIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "binaryId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "description": "#### For a detailed description of the API please check out our [Binaries Reference Guide](http://cumulocity.com/guides/reference/binaries/)",
+        "summary": "Replace a binary",
+        "tags": [
+          "Binaries"
+        ],
+        "operationId": "InventoryBinariesByBinaryIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "binaryId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Binaries Reference Guide](http://cumulocity.com/guides/reference/binaries/)",
+        "summary": "Delete a binary",
+        "tags": [
+          "Binaries"
+        ],
+        "operationId": "InventoryBinariesByBinaryIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "binaryId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/cep/modules": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Get all CEP modules",
+        "tags": [
+          "CEP"
+        ],
+        "operationId": "CepModulesGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "Example: SendSms On Alarm",
+        "tags": [
+          "CEP"
+        ],
+        "operationId": "CepModulesPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/cep/modules/{id}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Get single CEP module",
+        "tags": [
+          "CEP"
+        ],
+        "operationId": "CepModulesByIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "Deploy CEP module",
+        "tags": [
+          "CEP"
+        ],
+        "operationId": "CepModulesByIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeployCEPmoduleRequest"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "Delete CEP module",
+        "tags": [
+          "CEP"
+        ],
+        "operationId": "CepModulesByIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/platform": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Platform",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "PlatformGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/alarm": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Alarm",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "AlarmGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/audit": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Audit",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "AuditGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/devicecontrol": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "DeviceControl",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "DevicecontrolGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/event": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Event",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "EventGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/identity": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Identity",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "IdentityGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Inventory",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "InventoryGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/measurement": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Measurement",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "MeasurementGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "User",
+        "tags": [
+          "Cumulocity API Overview"
+        ],
+        "operationId": "UserGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/devicecontrol/operations": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Device Control Reference Guide](http://cumulocity.com/guides/reference/device-control/)",
+        "summary": "Get collection of operations",
+        "tags": [
+          "DeviceControl"
+        ],
+        "operationId": "DevicecontrolOperationsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Device Control Reference Guide](http://cumulocity.com/guides/reference/device-control/)",
+        "summary": "Create an operation",
+        "tags": [
+          "DeviceControl"
+        ],
+        "operationId": "DevicecontrolOperationsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateanoperationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Device Control Reference Guide](http://cumulocity.com/guides/reference/device-control/)",
+        "summary": "Delete operations for time filter",
+        "tags": [
+          "DeviceControl"
+        ],
+        "operationId": "DevicecontrolOperationsDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/devicecontrol/operations/{operationId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Device Control Reference Guide](http://cumulocity.com/guides/reference/device-control/)",
+        "summary": "Get a specific operation",
+        "tags": [
+          "DeviceControl"
+        ],
+        "operationId": "DevicecontrolOperationsByOperationIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "description": "#### For a detailed description of the API please check out our [Device Control Reference Guide](http://cumulocity.com/guides/reference/device-control/)",
+        "summary": "Execute operation",
+        "tags": [
+          "DeviceControl"
+        ],
+        "operationId": "DevicecontrolOperationsByOperationIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/ExecuteoperationRequest"
+            }
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/devicecontrol/notifications": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Real-time Notification Reference Guide](http://cumulocity.com/guides/reference/real-time-notifications/)",
+        "summary": "Device Push Handshake session",
+        "tags": [
+          "DeviceControl DevicePush"
+        ],
+        "operationId": "DevicecontrolNotificationsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DevicePushHandshakesessionRequest"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/devicecontrol/newDeviceRequests": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Device Control Reference Guide](http://cumulocity.com/guides/reference/device-control/)",
+        "summary": "Add new device request",
+        "tags": [
+          "DeviceRequest"
+        ],
+        "operationId": "DevicecontrolNewDeviceRequestsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddnewdevicerequestRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/devicecontrol/newDeviceRequests/{id}": {
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "Accept device request",
+        "tags": [
+          "DeviceRequest"
+        ],
+        "operationId": "DevicecontrolNewDeviceRequestsByIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AcceptdevicerequestRequest"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/event/events": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Event Reference Guide](http://cumulocity.com/guides/reference/events/)",
+        "summary": "Get collection of events",
+        "tags": [
+          "Event"
+        ],
+        "operationId": "EventEventsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Event Reference Guide](http://cumulocity.com/guides/reference/events/)",
+        "summary": "Create new event",
+        "tags": [
+          "Event"
+        ],
+        "operationId": "EventEventsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateneweventRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/identity/globalIds/{deviceId}/externalIds": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Identity Reference Guide](http://cumulocity.com/guides/reference/identity/)",
+        "summary": "Get all externalIds registered for a managedObject",
+        "tags": [
+          "Identity"
+        ],
+        "operationId": "IdentityGlobalIdsExternalIdsByDeviceIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Identity Reference Guide](http://cumulocity.com/guides/reference/identity/)",
+        "summary": "Create an externalId for a managedObject",
+        "tags": [
+          "Identity"
+        ],
+        "operationId": "IdentityGlobalIdsExternalIdsByDeviceIdPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateanexternalIdforamanagedObjectRequest"
+            }
+          },
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/identity/externalIds/{externalIdType}/{externalId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Identity Reference Guide](http://cumulocity.com/guides/reference/identity/)",
+        "summary": "Get ManagedObject for a specific externalId",
+        "tags": [
+          "Identity"
+        ],
+        "operationId": "IdentityExternalIdsByExternalIdTypeAndExternalIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "externalIdType",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "externalId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/identity/externalIds/{type}/{externalId}": {
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Identity Reference Guide](http://cumulocity.com/guides/reference/identity/)",
+        "summary": "Remove externalId from a managed object",
+        "tags": [
+          "Identity"
+        ],
+        "operationId": "IdentityExternalIdsByTypeAndExternalIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "externalId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/managedObjects": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Get collection of managedObjects",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Create device with temperature measurement support",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatedevicewithtemperaturemeasurementsupportRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/managedObjects/{deviceId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Get a specific managedObject",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsByDeviceIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Add motion tracking to a device",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsByDeviceIdPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddmotiontrackingtoadeviceRequest"
+            }
+          },
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Delete a specific managedObject",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsByDeviceIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/managedObjects/{deviceId}/childDevices": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Add a managedObject reference to the childDevices of another managedObject as childDevice",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsChildDevicesByDeviceIdPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddamanagedObjectreferencetothechildDevicesofanothermanagedObjectaschildDeviceRequest"
+            }
+          },
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/managedObjects/{deviceId}/childAssets": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Add a managedObject reference to the childDevices of another managedObject as childAsset",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsChildAssetsByDeviceIdPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddamanagedObjectreferencetothechildDevicesofanothermanagedObjectaschildAssetRequest"
+            }
+          },
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/managedObjects/{parentId}/childDevices/{childId}": {
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Unassign a child from childDevices",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsChildDevicesByParentIdAndChildIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "childId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/inventory/managedObjects/{parentId}/childAssets/{childId}": {
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Inventory Reference Guide](http://cumulocity.com/guides/reference/inventory/)",
+        "summary": "Unassign a child from childAssets",
+        "tags": [
+          "Inventory"
+        ],
+        "operationId": "InventoryManagedObjectsChildAssetsByParentIdAndChildIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "childId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/measurement/measurements": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Measurement Reference Guide](http://cumulocity.com/guides/reference/measurements/)",
+        "summary": "Get collection of measurements",
+        "tags": [
+          "Measurement"
+        ],
+        "operationId": "MeasurementMeasurementsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Measurement Reference Guide](http://cumulocity.com/guides/reference/measurements/)",
+        "summary": "Create temperature measurement",
+        "tags": [
+          "Measurement"
+        ],
+        "operationId": "MeasurementMeasurementsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatetemperaturemeasurementRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Measurement Reference Guide](http://cumulocity.com/guides/reference/measurements/)",
+        "summary": "Delete measurements for time filter",
+        "tags": [
+          "Measurement"
+        ],
+        "operationId": "MeasurementMeasurementsDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/measurement/measurements/{measurementId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Measurement Reference Guide](http://cumulocity.com/guides/reference/measurements/)",
+        "summary": "Get specific measurement",
+        "tags": [
+          "Measurement"
+        ],
+        "operationId": "MeasurementMeasurementsByMeasurementIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "measurementId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/measurement/measurements/series": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Measurement Reference Guide](http://cumulocity.com/guides/reference/measurements/)",
+        "summary": "Get measurement series",
+        "tags": [
+          "Measurement"
+        ],
+        "operationId": "MeasurementMeasurementsSeriesGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "source",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "dateTo",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/cep/realtime": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Real-time Notification Reference Guide](http://cumulocity.com/guides/reference/real-time-notifications/)",
+        "summary": "Handshake session",
+        "tags": [
+          "Real-time"
+        ],
+        "operationId": "CepRealtimePost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/HandshakesessionRequest"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/s": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [SmartREST Reference Guide](http://cumulocity.com/guides/reference/smartrest/)\n\nYou have to register all templates (request and response) in one single request.\n\nFor a better overview this example contains only request templates.\n\n###### Syntax:\n10,{unique id},{request method},{uri},{content type},{accept},{placeholder},{parameter type},{template string}\n\n\n* unique id: message identifier inside die SmartREST template\n* request method: HTTP method to use for the request\n* uri: the uri to the Cumulocity ressource\n* content type: HTTP Content-Type header\n* accept: HTTP Accept header\n* placeholder: string that will be replaced in the template string with the values of a SmartREST request\n* parameter type: optional list to set data type of parameters for validation in SmartREST\n* template string: request body including placeholders that will be send by SmartREST",
+        "summary": "Register Request Templates",
+        "tags": [
+          "SmartREST"
+        ],
+        "operationId": "SPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "X-Id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/tenants": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get collection of tenants",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantTenantsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Create tenant",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantTenantsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatetenantRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Update a tenant",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantTenantsPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateatenantRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/tenants/{tenantId}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get specific tenant",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantTenantsByTenantIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Delete specific tenant",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantTenantsByTenantIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/statistics": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get collection of tenant statistics",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantStatisticsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/statistics/summary": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get  tenant statistic summary",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantStatisticsSummaryGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/statistics/allTenantsSummary": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get  tenant statistic summary over all tenants",
+        "tags": [
+          "Tenant"
+        ],
+        "operationId": "TenantStatisticsAllTenantsSummaryGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/tenants/{tenantId}/applications": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get collection of tenant applications",
+        "tags": [
+          "Tenant Applications"
+        ],
+        "operationId": "TenantTenantsApplicationsByTenantIdGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Add application to tenant",
+        "tags": [
+          "Tenant Applications"
+        ],
+        "operationId": "TenantTenantsApplicationsByTenantIdPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddapplicationtotenantRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/options": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get collection of tenant options",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantOptionsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Create tenant option",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantOptionsPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatetenantoptionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/system/options": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get collection of system options",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantSystemOptionsGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/options/{category}/{key}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get specific tenant option",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantOptionsByCategoryAndKeyGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "put": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Update tenant option",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantOptionsByCategoryAndKeyPut",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdatetenantoptionRequest"
+            }
+          },
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Delete tenant option",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantOptionsByCategoryAndKeyDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/system/options/{category}/{key}": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get specific system option",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantSystemOptionsByCategoryAndKeyGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "key",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/tenant/system/options/system/version": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [Tenant Reference Guide](http://cumulocity.com/guides/reference/tenants/)",
+        "summary": "Get system version",
+        "tags": [
+          "Tenant Options"
+        ],
+        "operationId": "TenantSystemOptionsSystemVersionGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user/currentUser": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [User Reference Guide](http://cumulocity.com/guides/reference/users/)",
+        "summary": "Get current user information",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UserCurrentUserGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user/roles": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [User Reference Guide](http://cumulocity.com/guides/reference/users/)",
+        "summary": "Get collection of roles for user",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UserRolesGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user/{tenant}/groups": {
+      "get": {
+        "description": "#### For a detailed description of the API please check out our [User Reference Guide](http://cumulocity.com/guides/reference/users/)",
+        "summary": "Get User Groups",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UserGroupsByTenantGet",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenant",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user/{tenant}/users": {
+      "post": {
+        "description": "#### For a detailed description of the API please check out our [User Reference Guide](http://cumulocity.com/guides/reference/users/)",
+        "summary": "Create new user",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UserUsersByTenantPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreatenewuserRequest"
+            }
+          },
+          {
+            "name": "tenant",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user/{tenant}/users/{yourUserName}": {
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [User Reference Guide](http://cumulocity.com/guides/reference/users/)",
+        "summary": "Delete a User",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UserUsersByTenantAndYourUserNameDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenant",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "yourUserName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/user/{tenant}/groups/{groupId}/users/{yourUserName}": {
+      "delete": {
+        "description": "#### For a detailed description of the API please check out our [User Reference Guide](http://cumulocity.com/guides/reference/users/)",
+        "summary": "Remove a User from a Usergroup",
+        "tags": [
+          "User"
+        ],
+        "operationId": "UserGroupsUsersYourUserNameByTenantAndGroupIdDelete",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenant",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "groupId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "yourUserName",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreatenewalarmRequest": {
+      "title": "CreatenewalarmRequest",
+      "example": {
+        "source": {
+          "id": "10200"
+        },
+        "type": "TestAlarm",
+        "text": "I am an alarm",
+        "severity": "MINOR",
+        "status": "ACTIVE",
+        "time": "2014-03-03T12:03:27.845Z"
+      },
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "type",
+        "text",
+        "severity",
+        "status",
+        "time"
+      ]
+    },
+    "Source": {
+      "title": "Source",
+      "example": {
+        "id": "10200"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "AcknowledgeanalarmRequest": {
+      "title": "AcknowledgeanalarmRequest",
+      "example": {
+        "status": "ACKNOWLEDGED"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "ClearanalarmRequest": {
+      "title": "ClearanalarmRequest",
+      "example": {
+        "status": "CLEARED"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "CreateauditrecordRequest": {
+      "title": "CreateauditrecordRequest",
+      "example": {
+        "type": "com_cumulocity_audit_LoginFailure",
+        "time": "2011-09-06T12:03:27.845Z",
+        "text": "Login failed after 3 attempts.",
+        "user": "Spock",
+        "application": "Omniscape",
+        "activity": "login",
+        "severity": "warning"
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "application": {
+          "type": "string"
+        },
+        "activity": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "time",
+        "text",
+        "user",
+        "application",
+        "activity",
+        "severity"
+      ]
+    },
+    "object": {
+      "title": "object",
+      "example": {
+        "name": "HelloWorld",
+        "type": "text/plain"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "type"
+      ]
+    },
+    "DeployCEPmoduleRequest": {
+      "title": "DeployCEPmoduleRequest",
+      "example": {
+        "status": "DEPLOYED"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "UndeployCEPmoduleRequest": {
+      "title": "UndeployCEPmoduleRequest",
+      "example": {
+        "status": "NOT_DEPLOYED"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "CreateanoperationRequest": {
+      "title": "CreateanoperationRequest",
+      "example": {
+        "deviceId": "10200",
+        "com_cumulocity_model_WebCamDevice": {
+          "name": "take picture",
+          "parameters": {
+            "duration": "5s",
+            "quality": "HD"
+          }
+        },
+        "description": "WebCam picture"
+      },
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "string"
+        },
+        "com_cumulocity_model_WebCamDevice": {
+          "$ref": "#/definitions/ComCumulocityModelWebCamDevice"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deviceId",
+        "com_cumulocity_model_WebCamDevice",
+        "description"
+      ]
+    },
+    "ComCumulocityModelWebCamDevice": {
+      "title": "ComCumulocityModelWebCamDevice",
+      "example": {
+        "name": "take picture",
+        "parameters": {
+          "duration": "5s",
+          "quality": "HD"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "parameters": {
+          "$ref": "#/definitions/Parameters"
+        }
+      },
+      "required": [
+        "name",
+        "parameters"
+      ]
+    },
+    "Parameters": {
+      "title": "Parameters",
+      "example": {
+        "duration": "5s",
+        "quality": "HD"
+      },
+      "type": "object",
+      "properties": {
+        "duration": {
+          "type": "string"
+        },
+        "quality": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "duration",
+        "quality"
+      ]
+    },
+    "CreaterestartoperationRequest": {
+      "title": "CreaterestartoperationRequest",
+      "example": {
+        "deviceId": "10200",
+        "c8y_Restart": {},
+        "description": "Restart device"
+      },
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "string"
+        },
+        "c8y_Restart": {
+          "type": "object"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deviceId",
+        "c8y_Restart",
+        "description"
+      ]
+    },
+    "CreateshelloperationRequest": {
+      "title": "CreateshelloperationRequest",
+      "example": {
+        "deviceId": "10200",
+        "c8y_Command": {
+          "text": "myCommand"
+        },
+        "description": "Shell command"
+      },
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "string"
+        },
+        "c8y_Command": {
+          "$ref": "#/definitions/C8yCommand"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deviceId",
+        "c8y_Command",
+        "description"
+      ]
+    },
+    "C8yCommand": {
+      "title": "C8yCommand",
+      "example": {
+        "text": "myCommand"
+      },
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "ExecuteoperationRequest": {
+      "title": "ExecuteoperationRequest",
+      "example": {
+        "status": "EXECUTING"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "SuccessoperationRequest": {
+      "title": "SuccessoperationRequest",
+      "example": {
+        "status": "SUCCESSFUL"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "FailoperationRequest": {
+      "title": "FailoperationRequest",
+      "example": {
+        "status": "FAILED",
+        "failureReason": "Could not handle operation"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "failureReason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "failureReason"
+      ]
+    },
+    "DevicePushHandshakesessionRequest": {
+      "title": "DevicePushHandshakesessionRequest",
+      "example": {
+        "version": "1.0",
+        "minimumVersion": "0.9",
+        "channel": "/meta/handshake",
+        "supportedConnectionTypes": [
+          "long-polling"
+        ],
+        "advice": {
+          "timeout": 60000,
+          "interval": 0
+        }
+      },
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "minimumVersion": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "supportedConnectionTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "advice": {
+          "$ref": "#/definitions/Advice"
+        }
+      },
+      "required": [
+        "version",
+        "minimumVersion",
+        "channel",
+        "supportedConnectionTypes",
+        "advice"
+      ]
+    },
+    "Advice": {
+      "title": "Advice",
+      "example": {
+        "timeout": 60000,
+        "interval": 0
+      },
+      "type": "object",
+      "properties": {
+        "timeout": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "interval": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "timeout",
+        "interval"
+      ]
+    },
+    "DevicePushSubscribeRequest": {
+      "title": "DevicePushSubscribeRequest",
+      "example": {
+        "channel": "/meta/subscribe",
+        "subscription": "/*",
+        "clientId": "{{clientId}}"
+      },
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "subscription": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "subscription",
+        "clientId"
+      ]
+    },
+    "DevicePushConnectRequest": {
+      "title": "DevicePushConnectRequest",
+      "example": {
+        "channel": "/meta/connect",
+        "connectionType": "long-polling",
+        "clientId": "{{clientId}}"
+      },
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "connectionType": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "connectionType",
+        "clientId"
+      ]
+    },
+    "AddnewdevicerequestRequest": {
+      "title": "AddnewdevicerequestRequest",
+      "example": {
+        "id": "test_id"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "AcceptdevicerequestRequest": {
+      "title": "AcceptdevicerequestRequest",
+      "example": {
+        "status": "ACCEPTED"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "CreateneweventRequest": {
+      "title": "CreateneweventRequest",
+      "example": {
+        "source": {
+          "id": "10200"
+        },
+        "type": "TestEvent",
+        "text": "sensor was triggered",
+        "time": "2014-03-03T12:03:27.845Z"
+      },
+      "type": "object",
+      "properties": {
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "time": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "type",
+        "text",
+        "time"
+      ]
+    },
+    "CreateLocationUpdateeventformotiontrackingRequest": {
+      "title": "CreateLocationUpdateeventformotiontrackingRequest",
+      "example": {
+        "c8y_Position": {
+          "alt": 67,
+          "lng": 6.95173,
+          "lat": 51.151977
+        },
+        "time": "2013-06-22T15:03:14+00:00",
+        "source": {
+          "id": "10300"
+        },
+        "type": "c8y_LocationUpdate",
+        "text": "LocUpdate"
+      },
+      "type": "object",
+      "properties": {
+        "c8y_Position": {
+          "$ref": "#/definitions/C8yPosition"
+        },
+        "time": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c8y_Position",
+        "time",
+        "source",
+        "type",
+        "text"
+      ]
+    },
+    "C8yPosition": {
+      "title": "C8yPosition",
+      "example": {
+        "alt": 67,
+        "lng": 6.95173,
+        "lat": 51.151977
+      },
+      "type": "object",
+      "properties": {
+        "alt": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "lng": {
+          "type": "number",
+          "format": "double"
+        },
+        "lat": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "alt",
+        "lng",
+        "lat"
+      ]
+    },
+    "CreateanexternalIdforamanagedObjectRequest": {
+      "title": "CreateanexternalIdforamanagedObjectRequest",
+      "example": {
+        "externalId": "useThisTestId",
+        "type": "testExternalId"
+      },
+      "type": "object",
+      "properties": {
+        "externalId": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "externalId",
+        "type"
+      ]
+    },
+    "CreatedevicewithtemperaturemeasurementsupportRequest": {
+      "title": "CreatedevicewithtemperaturemeasurementsupportRequest",
+      "example": {
+        "name": "testMeasurementDevice",
+        "c8y_IsDevice": {},
+        "c8y_SupportedMeasurements": [
+          "c8y_TemperatureMeasurement"
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "c8y_IsDevice": {
+          "type": "object"
+        },
+        "c8y_SupportedMeasurements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "c8y_IsDevice",
+        "c8y_SupportedMeasurements"
+      ]
+    },
+    "CreatedevicewithagentfragmentRequest": {
+      "title": "CreatedevicewithagentfragmentRequest",
+      "example": {
+        "name": "testAgent",
+        "c8y_IsDevice": {},
+        "com_cumulocity_model_Agent": {}
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "c8y_IsDevice": {
+          "type": "object"
+        },
+        "com_cumulocity_model_Agent": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "c8y_IsDevice",
+        "com_cumulocity_model_Agent"
+      ]
+    },
+    "AddamanagedObjectreferencetothechildDevicesofanothermanagedObjectaschildDeviceRequest": {
+      "title": "AddamanagedObjectreferencetothechildDevicesofanothermanagedObjectaschildDeviceRequest",
+      "example": {
+        "managedObject": {
+          "id": "10200"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "managedObject": {
+          "$ref": "#/definitions/ManagedObject"
+        }
+      },
+      "required": [
+        "managedObject"
+      ]
+    },
+    "ManagedObject": {
+      "title": "ManagedObject",
+      "example": {
+        "id": "10200"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "AddamanagedObjectreferencetothechildDevicesofanothermanagedObjectaschildAssetRequest": {
+      "title": "AddamanagedObjectreferencetothechildDevicesofanothermanagedObjectaschildAssetRequest",
+      "example": {
+        "managedObject": {
+          "id": "10200"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "managedObject": {
+          "$ref": "#/definitions/ManagedObject"
+        }
+      },
+      "required": [
+        "managedObject"
+      ]
+    },
+    "CreateAgentRequest": {
+      "title": "CreateAgentRequest",
+      "example": {
+        "name": "testAgent",
+        "com_cumulocity_model_Agent": {}
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "com_cumulocity_model_Agent": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "com_cumulocity_model_Agent"
+      ]
+    },
+    "AddmotiontrackingtoadeviceRequest": {
+      "title": "AddmotiontrackingtoadeviceRequest",
+      "example": {
+        "c8y_MotionTracking": {
+          "active": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "c8y_MotionTracking": {
+          "$ref": "#/definitions/C8yMotionTracking"
+        }
+      },
+      "required": [
+        "c8y_MotionTracking"
+      ]
+    },
+    "C8yMotionTracking": {
+      "title": "C8yMotionTracking",
+      "example": {
+        "active": true
+      },
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "active"
+      ]
+    },
+    "UpdatedevicepositionRequest": {
+      "title": "UpdatedevicepositionRequest",
+      "example": {
+        "c8y_Position": {
+          "alt": 67,
+          "lng": 6.95173,
+          "lat": 51.151977
+        }
+      },
+      "type": "object",
+      "properties": {
+        "c8y_Position": {
+          "$ref": "#/definitions/C8yPosition"
+        }
+      },
+      "required": [
+        "c8y_Position"
+      ]
+    },
+    "UpdatehardwarefragmentRequest": {
+      "title": "UpdatehardwarefragmentRequest",
+      "example": {
+        "c8y_Hardware": {
+          "revision": "1.0",
+          "model": "My device model",
+          "serialNumber": "1234567890"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "c8y_Hardware": {
+          "$ref": "#/definitions/C8yHardware"
+        }
+      },
+      "required": [
+        "c8y_Hardware"
+      ]
+    },
+    "C8yHardware": {
+      "title": "C8yHardware",
+      "example": {
+        "revision": "1.0",
+        "model": "My device model",
+        "serialNumber": "1234567890"
+      },
+      "type": "object",
+      "properties": {
+        "revision": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "serialNumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "revision",
+        "model",
+        "serialNumber"
+      ]
+    },
+    "UpdatemobilefragmentRequest": {
+      "title": "UpdatemobilefragmentRequest",
+      "example": {
+        "c8y_Mobile": {
+          "ecn0": "5.5",
+          "mcc": "262",
+          "msisdn": "",
+          "currentOperator": "o2 - de",
+          "rcsp": "77",
+          "imei": "xxxx",
+          "iccid": "xxx",
+          "lac": "7B86",
+          "currentBand": "WCDMA2100",
+          "cellId": "21132502",
+          "connType": "3g",
+          "mnc": "7",
+          "rssi": "-77",
+          "imsi": "xxx"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "c8y_Mobile": {
+          "$ref": "#/definitions/C8yMobile"
+        }
+      },
+      "required": [
+        "c8y_Mobile"
+      ]
+    },
+    "C8yMobile": {
+      "title": "C8yMobile",
+      "example": {
+        "ecn0": "5.5",
+        "mcc": "262",
+        "msisdn": "",
+        "currentOperator": "o2 - de",
+        "rcsp": "77",
+        "imei": "xxxx",
+        "iccid": "xxx",
+        "lac": "7B86",
+        "currentBand": "WCDMA2100",
+        "cellId": "21132502",
+        "connType": "3g",
+        "mnc": "7",
+        "rssi": "-77",
+        "imsi": "xxx"
+      },
+      "type": "object",
+      "properties": {
+        "ecn0": {
+          "type": "string"
+        },
+        "mcc": {
+          "type": "string"
+        },
+        "msisdn": {
+          "type": "string"
+        },
+        "currentOperator": {
+          "type": "string"
+        },
+        "rcsp": {
+          "type": "string"
+        },
+        "imei": {
+          "type": "string"
+        },
+        "iccid": {
+          "type": "string"
+        },
+        "lac": {
+          "type": "string"
+        },
+        "currentBand": {
+          "type": "string"
+        },
+        "cellId": {
+          "type": "string"
+        },
+        "connType": {
+          "type": "string"
+        },
+        "mnc": {
+          "type": "string"
+        },
+        "rssi": {
+          "type": "string"
+        },
+        "imsi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ecn0",
+        "mcc",
+        "msisdn",
+        "currentOperator",
+        "rcsp",
+        "imei",
+        "iccid",
+        "lac",
+        "currentBand",
+        "cellId",
+        "connType",
+        "mnc",
+        "rssi",
+        "imsi"
+      ]
+    },
+    "UpdateconfigurationRequest": {
+      "title": "UpdateconfigurationRequest",
+      "example": {
+        "c8y_Configuration": {
+          "config": "myConfiguration"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "c8y_Configuration": {
+          "$ref": "#/definitions/C8yConfiguration"
+        }
+      },
+      "required": [
+        "c8y_Configuration"
+      ]
+    },
+    "C8yConfiguration": {
+      "title": "C8yConfiguration",
+      "example": {
+        "config": "myConfiguration"
+      },
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "config"
+      ]
+    },
+    "CreatetemperaturemeasurementRequest": {
+      "title": "CreatetemperaturemeasurementRequest",
+      "example": {
+        "c8y_TemperatureMeasurement": {
+          "T": {
+            "value": 25,
+            "unit": "C"
+          }
+        },
+        "time": "2013-06-22T15:03:14+00:00",
+        "source": {
+          "id": "10200"
+        },
+        "type": "c8y_TemperatureMeasurement"
+      },
+      "type": "object",
+      "properties": {
+        "c8y_TemperatureMeasurement": {
+          "$ref": "#/definitions/C8yTemperatureMeasurement"
+        },
+        "time": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c8y_TemperatureMeasurement",
+        "time",
+        "source",
+        "type"
+      ]
+    },
+    "C8yTemperatureMeasurement": {
+      "title": "C8yTemperatureMeasurement",
+      "example": {
+        "T": {
+          "value": 25,
+          "unit": "C"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "T": {
+          "$ref": "#/definitions/T"
+        }
+      },
+      "required": [
+        "T"
+      ]
+    },
+    "T": {
+      "title": "T",
+      "example": {
+        "value": 25,
+        "unit": "C"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ]
+    },
+    "CreatesignalmeasurementRequest": {
+      "title": "CreatesignalmeasurementRequest",
+      "example": {
+        "c8y_SignalStrength": {
+          "rssi": {
+            "value": -80,
+            "unit": "db"
+          }
+        },
+        "time": "2013-06-22T15:03:14+00:00",
+        "source": {
+          "id": "10200"
+        },
+        "type": "c8y_SignalMeasurement"
+      },
+      "type": "object",
+      "properties": {
+        "c8y_SignalStrength": {
+          "$ref": "#/definitions/C8ySignalStrength"
+        },
+        "time": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c8y_SignalStrength",
+        "time",
+        "source",
+        "type"
+      ]
+    },
+    "C8ySignalStrength": {
+      "title": "C8ySignalStrength",
+      "example": {
+        "rssi": {
+          "value": -80,
+          "unit": "db"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "rssi": {
+          "$ref": "#/definitions/Rssi"
+        }
+      },
+      "required": [
+        "rssi"
+      ]
+    },
+    "Rssi": {
+      "title": "Rssi",
+      "example": {
+        "value": -80,
+        "unit": "db"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ]
+    },
+    "CreatespeedmeasurementRequest": {
+      "title": "CreatespeedmeasurementRequest",
+      "example": {
+        "c8y_SpeedMeasurement": {
+          "speed": {
+            "value": 25,
+            "unit": "km/h"
+          }
+        },
+        "time": "2013-06-22T15:03:14+00:00",
+        "source": {
+          "id": "10200"
+        },
+        "type": "c8y_SpeedMeasurement"
+      },
+      "type": "object",
+      "properties": {
+        "c8y_SpeedMeasurement": {
+          "$ref": "#/definitions/C8ySpeedMeasurement"
+        },
+        "time": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c8y_SpeedMeasurement",
+        "time",
+        "source",
+        "type"
+      ]
+    },
+    "C8ySpeedMeasurement": {
+      "title": "C8ySpeedMeasurement",
+      "example": {
+        "speed": {
+          "value": 25,
+          "unit": "km/h"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "speed": {
+          "$ref": "#/definitions/Speed"
+        }
+      },
+      "required": [
+        "speed"
+      ]
+    },
+    "Speed": {
+      "title": "Speed",
+      "example": {
+        "value": 25,
+        "unit": "km/h"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ]
+    },
+    "CreatemultiplemeasurementsRequest": {
+      "title": "CreatemultiplemeasurementsRequest",
+      "example": {
+        "measurements": [
+          {
+            "c8y_SpeedMeasurement": {
+              "speed": {
+                "value": 25,
+                "unit": "km/h"
+              }
+            },
+            "time": "2013-06-22T15:03:14+00:00",
+            "source": {
+              "id": "10200"
+            },
+            "type": "c8y_SpeedMeasurement"
+          },
+          {
+            "c8y_SpeedMeasurement": {
+              "speed": {
+                "value": 22,
+                "unit": "km/h"
+              }
+            },
+            "time": "2013-06-22T15:05:14+00:00",
+            "source": {
+              "id": "10200"
+            },
+            "type": "c8y_SpeedMeasurement"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "measurements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measurement"
+          }
+        }
+      },
+      "required": [
+        "measurements"
+      ]
+    },
+    "Measurement": {
+      "title": "Measurement",
+      "example": {
+        "c8y_SpeedMeasurement": {
+          "speed": {
+            "value": 25,
+            "unit": "km/h"
+          }
+        },
+        "time": "2013-06-22T15:03:14+00:00",
+        "source": {
+          "id": "10200"
+        },
+        "type": "c8y_SpeedMeasurement"
+      },
+      "type": "object",
+      "properties": {
+        "c8y_SpeedMeasurement": {
+          "$ref": "#/definitions/C8ySpeedMeasurement"
+        },
+        "time": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/definitions/Source"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "c8y_SpeedMeasurement",
+        "time",
+        "source",
+        "type"
+      ]
+    },
+    "HandshakesessionRequest": {
+      "title": "HandshakesessionRequest",
+      "example": {
+        "version": "1.0",
+        "minimumVersion": "0.9",
+        "channel": "/meta/handshake",
+        "supportedConnectionTypes": [
+          "long-polling"
+        ],
+        "advice": {
+          "timeout": 60000,
+          "interval": 0
+        }
+      },
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "minimumVersion": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "supportedConnectionTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "advice": {
+          "$ref": "#/definitions/Advice"
+        }
+      },
+      "required": [
+        "version",
+        "minimumVersion",
+        "channel",
+        "supportedConnectionTypes",
+        "advice"
+      ]
+    },
+    "SubscribeachannelRequest": {
+      "title": "SubscribeachannelRequest",
+      "example": {
+        "channel": "/meta/subscribe",
+        "subscription": "/managedobjects/*",
+        "clientId": "{{clientId}}"
+      },
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "subscription": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "subscription",
+        "clientId"
+      ]
+    },
+    "UnsubscribeachannelRequest": {
+      "title": "UnsubscribeachannelRequest",
+      "example": {
+        "channel": "/meta/unsubscribe",
+        "subscription": "/managedobjects/*",
+        "clientId": "{{clientId}}"
+      },
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "subscription": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "subscription",
+        "clientId"
+      ]
+    },
+    "LongPollingconnectionforretrievingnotificationsRequest": {
+      "title": "LongPollingconnectionforretrievingnotificationsRequest",
+      "example": {
+        "channel": "/meta/connect",
+        "connectionType": "long-polling",
+        "clientId": "{{clientId}}"
+      },
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "connectionType": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "connectionType",
+        "clientId"
+      ]
+    },
+    "DisconnectsessionRequest": {
+      "title": "DisconnectsessionRequest",
+      "example": {
+        "channel": "/meta/disconnect",
+        "clientId": "{{clientId}}"
+      },
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "channel",
+        "clientId"
+      ]
+    },
+    "CreatetenantRequest": {
+      "title": "CreatetenantRequest",
+      "example": {
+        "id": "mytenant",
+        "company": "Cumulocity GmbH",
+        "domain": "mytenant.cumulocity.com",
+        "contactName": "Mr. Smith",
+        "contactPhone": "0123-4567829",
+        "adminName": "firstAdmin",
+        "adminPass": "myPassword"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "contactName": {
+          "type": "string"
+        },
+        "contactPhone": {
+          "type": "string"
+        },
+        "adminName": {
+          "type": "string"
+        },
+        "adminPass": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "company",
+        "domain",
+        "contactName",
+        "contactPhone",
+        "adminName",
+        "adminPass"
+      ]
+    },
+    "UpdateatenantRequest": {
+      "title": "UpdateatenantRequest",
+      "example": {
+        "contactPhone": "0123-4567829"
+      },
+      "type": "object",
+      "properties": {
+        "contactPhone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "contactPhone"
+      ]
+    },
+    "AddapplicationtotenantRequest": {
+      "title": "AddapplicationtotenantRequest",
+      "example": {
+        "application": {
+          "self": "{{url to application}}"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "application": {
+          "$ref": "#/definitions/Application"
+        }
+      },
+      "required": [
+        "application"
+      ]
+    },
+    "Application": {
+      "title": "Application",
+      "example": {
+        "self": "{{url to application}}"
+      },
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "CreatetenantoptionRequest": {
+      "title": "CreatetenantoptionRequest",
+      "example": {
+        "category": "mycategory",
+        "key": "mykey",
+        "value": "myvalue"
+      },
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "key",
+        "value"
+      ]
+    },
+    "UpdatetenantoptionRequest": {
+      "title": "UpdatetenantoptionRequest",
+      "example": {
+        "value": "myNewValue"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    },
+    "CreatenewuserRequest": {
+      "title": "CreatenewuserRequest",
+      "example": {
+        "enabled": true,
+        "userName": "yourUserName",
+        "firstName": "yourFirstName",
+        "lastName": "yourLastName",
+        "password": "yourPassword"
+      },
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "enabled",
+        "userName",
+        "firstName",
+        "lastName",
+        "password"
+      ]
+    },
+    "CreatenewuserwithdevicepermissionsRequest": {
+      "title": "CreatenewuserwithdevicepermissionsRequest",
+      "example": {
+        "enabled": true,
+        "userName": "yourUserName",
+        "firstName": "yourFirstName",
+        "lastName": "yourLastName",
+        "password": "yourPassword",
+        "devicePermissions": {
+          "{{deviceId}}": [
+            "*:*:READ"
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "devicePermissions": {
+          "$ref": "#/definitions/DevicePermissions"
+        }
+      },
+      "required": [
+        "enabled",
+        "userName",
+        "firstName",
+        "lastName",
+        "password",
+        "devicePermissions"
+      ]
+    },
+    "DevicePermissions": {
+      "title": "DevicePermissions",
+      "example": {
+        "{{deviceId}}": [
+          "*:*:READ"
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "{{deviceId}}": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "{{deviceId}}"
+      ]
+    }
+  },
+  "security": [
+    {
+      "auth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Alarm"
+    },
+    {
+      "name": "Application"
+    },
+    {
+      "name": "Audit"
+    },
+    {
+      "name": "Binaries"
+    },
+    {
+      "name": "CEP"
+    },
+    {
+      "name": "Cumulocity API Overview"
+    },
+    {
+      "name": "DeviceControl"
+    },
+    {
+      "name": "DeviceControl DevicePush"
+    },
+    {
+      "name": "DeviceRequest"
+    },
+    {
+      "name": "Event"
+    },
+    {
+      "name": "Identity"
+    },
+    {
+      "name": "Inventory"
+    },
+    {
+      "name": "Measurement"
+    },
+    {
+      "name": "Real-time"
+    },
+    {
+      "name": "SmartREST"
+    },
+    {
+      "name": "SmartREST device push"
+    },
+    {
+      "name": "Tenant"
+    },
+    {
+      "name": "Tenant Applications"
+    },
+    {
+      "name": "Tenant Options"
+    },
+    {
+      "name": "User"
+    }
+  ]
+}
