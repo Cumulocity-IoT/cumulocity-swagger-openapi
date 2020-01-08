@@ -7,7 +7,7 @@ The source of the API is the official Cumulocity Postman collection https://app.
 
 The collection has been converted using APIMatic's API Transformer https://www.apimatic.io/transformer
 
-**Replace {host} parameter with your Cumulocity URL. **
+**Replace {host} parameter with your Cumulocity URL.**
 
 For example "host": "MyTenantName.eu-latest.cumulocity.com"
 
