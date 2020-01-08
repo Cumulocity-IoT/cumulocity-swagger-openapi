@@ -8,3 +8,5 @@ The collection has been converted using APIMatic's API Transformer https://www.a
 
 Replace {host} parameter with your Cumulocity URL. 
 For example "host": "MyTenantName.eu-latest.cumulocity.com"
+
+More info and a demo can be found here: http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Cumulocity%20integration%20with%20API%20Portal%20and%20API%20Gateway
