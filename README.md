@@ -15,3 +15,7 @@ The file can be used to import the Cumulocity API into Software AG's API Portal 
 
 More info and a demo can be found in the article: [Cumulocity integration with API Portal and API Gateway](http://techcommunity.softwareag.com/pwiki/-/wiki/Main/Cumulocity%20integration%20with%20API%20Portal%20and%20API%20Gateway)
 
+-----------------------------
+
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+
