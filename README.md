@@ -1,5 +1,7 @@
-# cumulocity-swagger-openapi
+# !!! Stale !!! cumulocity-swagger-openapi
 Swagger/OpenAPI RESTful API for Cumulocity
+
+> **Depreaction Notice**: This API file is outdated. Please use [https://cumulocity.com/api/10.15.0/dist/c8y-oas.json](https://cumulocity.com/api/10.15.0/dist/c8y-oas.json) instead. 
 
 ## This repository contains a Swagger/OpenAPI v2.0 API file.
 
